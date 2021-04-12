@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Family Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body
+    style="font-family: poiret one; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(home.png); background-size: cover;">
+
+    <h1 id="456" style="font-size: 50px; font-weight:700; color:snow; position: absolute; left: 10%; line-height: 20px; ">My Family Book
+    </h1>
+    <br>
+    <img id="Family" style="height: 450px; position: absolute; top:110px; left: 20%;">
+
+    <h2 id="family_text" style="font-weight: 100; font-size: 30px; position:absolute; top:45%; left: 3%; display: inline-block; color: snow; font-weight: 400;"></h2>
+    <button id="321" onclick="next()"
+        style="position: absolute; display: inline-block; font-size: 20px; left: 20%; top:600px; width:100px; height: 50px; background-color:snow;">Next</button>
+
+
+    <script>
+        var pics_array = [
+            "IMG_1035(2).jpg",
+            "IMG_1027(2).jpg",
+            "WhatsApp-Image-2021-04-08-at-12.55(2).jpg",
+            "WhatsApp-Image-2021-04-08-at-12.55.jpg"
+
+        ];
+
+        var text_array = [
+
+            "Mother",
+            "Grand mother",
+            "Grand father",
+            "Father"
+        ];
+        var o = 1;
+        var y = 0;
+
+        function next() {
+
+            if (o == 4) {
+                o = 0;
+            };
+
+            document.getElementById("Family").src = pics_array[o];
+            o++;
+
+            if (y == 4) {
+                y = 0;
+            };
+
+            document.getElementById("family_text").innerHTML = text_array[y];
+            y++;
+
+        };
+    </script>
+</body>
+
+</html>
